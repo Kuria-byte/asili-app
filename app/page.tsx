@@ -27,7 +27,7 @@ export default function Home() {
       id: "kikuyu",
       name: "Kikuyu",
       region: "Central Kenya",
-      image: "https://images.unsplash.com/photo-1589825743127-e9b6d0b10525?q=80&w=1000",
+      image: "/images/languages/kikuyu.jpg",
       difficulty: "Moderate",
       speakers: "8.5 million",
       progress: 40,
@@ -36,7 +36,7 @@ export default function Home() {
       id: "swahili",
       name: "Swahili",
       region: "Coastal Kenya",
-      image: "https://images.unsplash.com/photo-1596005554384-d293674c91d7?q=80&w=1000",
+      image: "/images/languages/swahili.jpg",
       difficulty: "Easy",
       speakers: "15 million",
       progress: 25,
@@ -45,7 +45,7 @@ export default function Home() {
       id: "luo",
       name: "Luo",
       region: "Western Kenya",
-      image: "https://images.unsplash.com/photo-1627394678694-cd1f98b014c0?q=80&w=1000",
+      image: "/images/lake-victoria-2.jpg",
       difficulty: "Moderate",
       speakers: "4.2 million",
       progress: 0,
@@ -56,7 +56,7 @@ export default function Home() {
   const dailyGoals = [
     {
       id: "lessons",
-      type: "lessons",
+      type: "lessons" as const,
       target: 3,
       completed: 2,
       icon: <BookOpen className="h-4 w-4 text-green-700" />,
@@ -64,7 +64,7 @@ export default function Home() {
     },
     {
       id: "words",
-      type: "words",
+      type: "words" as const,
       target: 20,
       completed: 15,
       icon: <Award className="h-4 w-4 text-blue-700" />,
@@ -72,7 +72,7 @@ export default function Home() {
     },
     {
       id: "minutes",
-      type: "minutes",
+      type: "minutes" as const,
       target: 30,
       completed: 20,
       icon: <BarChart2 className="h-4 w-4 text-amber-700" />,
@@ -84,45 +84,45 @@ export default function Home() {
   const todaysActivities = [
     {
       id: "1",
-      type: "lesson",
+      type: "lesson" as const,
       title: "Greetings in Kikuyu",
       description: "Learn essential greetings and introductions in Kikuyu language",
       duration: 15,
       xpReward: 25,
-      imageUrl: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=1000",
+      imageUrl: "/images/kikuyu-art.webp",
       href: "/lessons/1-1",
       completed: false,
     },
     {
       id: "2",
-      type: "practice",
+      type: "practice" as const,
       title: "Numbers 1-10 Review",
       description: "Practice counting in Kikuyu with interactive exercises",
       duration: 10,
       xpReward: 15,
-      imageUrl: "https://images.unsplash.com/photo-1518644961665-ed172691aaa1?q=80&w=1000",
+      imageUrl: "/images/kikuyu-art.webp",
       href: "/practice/numbers",
       completed: true,
     },
     {
       id: "3",
-      type: "challenge",
+      type: "challenge" as const,
       title: "Daily Vocabulary Challenge",
       description: "Test your knowledge of Kikuyu family terms in this timed challenge",
       duration: 5,
       xpReward: 30,
-      imageUrl: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1000",
+      imageUrl: "/images/kikuyu-art.webp",
       href: "/challenges/daily",
       completed: false,
     },
     {
       id: "4",
-      type: "cultural",
+      type: "cultural" as const,
       title: "Kikuyu Wedding Traditions",
       description: "Learn about traditional Kikuyu wedding ceremonies and customs",
       duration: 8,
       xpReward: 20,
-      imageUrl: "https://images.unsplash.com/photo-1583994538127-a22b55a79a89?q=80&w=1000",
+      imageUrl: "/images/kikuyu-art.webp",
       href: "/cultural/kikuyu-weddings",
       completed: false,
     },
@@ -132,21 +132,21 @@ export default function Home() {
   const culturalInsights = [
     {
       id: "1",
-      title: "The Symbolism of Kikuyu Beadwork",
+      title: "The Symbolism of Samburu Beadwork",
       content:
-        "Kikuyu beadwork is rich in symbolism, with different colors and patterns representing various aspects of life. Red symbolizes blood and sacrifice, blue represents the sky and divine blessing, while green signifies the land and fertility.",
-      imageUrl: "https://images.unsplash.com/photo-1621368286550-f54551f39b91?q=80&w=1000",
-      category: "art",
-      language: "Kikuyu",
-      region: "Central Kenya",
+        "The Samburu people are a semi-nomadic pastoralist tribe residing in the northern regions of Kenya. Beadwork holds a special place in Samburu culture. It denotes a number of things, such as one’s age, social status, wealth, gender, personal stories, and experiences. ",
+      imageUrl: "/images/kikuyu-elderly.png",
+      category: "art" as const,
+      language: "Samburu",
+      region: "North Kenya",
     },
     {
       id: "2",
       title: "Luo Proverb: 'Rieko ok dak e wi ng'ato achiel'",
       content:
         "This Luo proverb translates to 'Wisdom does not reside in one person's head.' It emphasizes the importance of collective knowledge and community consultation in decision-making.",
-      imageUrl: "https://images.unsplash.com/photo-1627394678694-cd1f98b014c0?q=80&w=1000",
-      category: "proverb",
+      imageUrl: "/images/lake-victoria-2.jpg",
+      category: "proverb" as const,
       language: "Luo",
       region: "Western Kenya",
     },
@@ -155,8 +155,8 @@ export default function Home() {
       title: "The Significance of the Maasai Shuka",
       content:
         "The iconic red checkered cloth worn by the Maasai, known as a shuka, serves both practical and cultural purposes. Beyond providing warmth and protection, the vibrant red color is believed to scare away lions and symbolizes bravery and strength.",
-      imageUrl: "https://images.unsplash.com/photo-1591377176347-a4e99ba5dd6a?q=80&w=1000",
-      category: "tradition",
+      imageUrl: "/images/maasai-man2.jpg",
+      category: "tradition" as const,
       language: "Maa",
       region: "Rift Valley",
     },
@@ -167,17 +167,17 @@ export default function Home() {
     {
       id: "kamau",
       name: "Kamau",
-      avatarUrl: "https://images.unsplash.com/photo-1583994538220-9e5a0d27feae?q=80&w=1000&h=1000&fit=crop",
+      avatarUrl: "/images/kikuyu-man-illustration.jpg",
     },
     {
       id: "wanjiku",
       name: "Wanjiku",
-      avatarUrl: "https://images.unsplash.com/photo-1583994538127-a22b55a79a89?q=80&w=1000&h=1000&fit=crop",
+      avatarUrl: "/images/kikuyu-woman-illustaion2.jpg",
     },
     {
       id: "vendor",
       name: "Market Vendor",
-      avatarUrl: "https://images.unsplash.com/photo-1583994538004-cb9533fce681?q=80&w=1000&h=1000&fit=crop",
+      avatarUrl: "/images/kikuyu-vendor.jpg",
     },
   ]
 
@@ -187,7 +187,7 @@ export default function Home() {
       character: storyCharacters[0],
       text: "Ũhoro waku, Wanjiku? Nĩ mwega?",
       translation: "How are you, Wanjiku? Are you well?",
-      backgroundImageUrl: "https://images.unsplash.com/photo-1604934380103-e397c912e65d?q=80&w=1000",
+      backgroundImageUrl: "/images/market.jpg",
       options: [
         {
           id: "1-1",
@@ -216,7 +216,7 @@ export default function Home() {
       character: storyCharacters[0],
       text: "Nĩ mwega mũno. Nĩngũthiĩ thokoni. Ũrenda gũka?",
       translation: "I am very well. I am going to the market. Do you want to come?",
-      backgroundImageUrl: "https://images.unsplash.com/photo-1604934380103-e397c912e65d?q=80&w=1000",
+      backgroundImageUrl: "/images/market.jpg",
       options: [
         {
           id: "2-1",
@@ -237,7 +237,7 @@ export default function Home() {
       character: storyCharacters[0],
       text: "Pole sana. Nĩ ngũkũrehere dawa kuuma thokoni.",
       translation: "I'm very sorry. I will bring you medicine from the market.",
-      backgroundImageUrl: "https://images.unsplash.com/photo-1604934380103-e397c912e65d?q=80&w=1000",
+      backgroundImageUrl: "/images/market.jpg",
       options: [
         {
           id: "3-1",
@@ -252,7 +252,7 @@ export default function Home() {
       character: storyCharacters[2],
       text: "Mũriũ na mũirĩtu, karibuni thokoni! Mũrenda kũgũra kĩ?",
       translation: "Young man and young woman, welcome to the market! What do you want to buy?",
-      backgroundImageUrl: "https://images.unsplash.com/photo-1519013423385-60e83c973a43?q=80&w=1000",
+      backgroundImageUrl: "/images/market.jpg",
       options: [
         {
           id: "4-1",
@@ -273,7 +273,7 @@ export default function Home() {
       character: storyCharacters[0],
       text: "Nĩ wega. Nĩngũkuona thutha.",
       translation: "That's fine. I will see you later.",
-      backgroundImageUrl: "https://images.unsplash.com/photo-1604934380103-e397c912e65d?q=80&w=1000",
+      backgroundImageUrl: "/images/market.jpg",
       isEndpoint: true,
     },
     {
@@ -281,7 +281,7 @@ export default function Home() {
       character: storyCharacters[2],
       text: "Nĩ ndĩ na matunda mega mũno! Maembe, macungwa, na mananasi.",
       translation: "I have very good fruits! Mangoes, oranges, and pineapples.",
-      backgroundImageUrl: "https://images.unsplash.com/photo-1519013423385-60e83c973a43?q=80&w=1000",
+      backgroundImageUrl: "/images/market.jpg",
       isEndpoint: true,
     },
     {
@@ -289,7 +289,7 @@ export default function Home() {
       character: storyCharacters[2],
       text: "Karibuni mũrore! Mũngĩenda kĩndũ, njĩĩrai.",
       translation: "Welcome to look! If you need anything, tell me.",
-      backgroundImageUrl: "https://images.unsplash.com/photo-1519013423385-60e83c973a43?q=80&w=1000",
+      backgroundImageUrl: "/images/market.jpg",
       isEndpoint: true,
     },
   ]
@@ -337,7 +337,7 @@ export default function Home() {
       <div className="flex min-h-screen flex-col bg-cream">
         {/* Enhanced Hero Section with Integrated Header */}
         <EnhancedHeroSection
-          imageUrl="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1000"
+          imageUrl="/images/hero-bg-1.jpg"
           title={
             <motion.h1
               className="font-serif text-4xl font-bold md:text-5xl lg:text-6xl mb-4 text-white"
@@ -345,7 +345,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              Discover Kenya's Rich Linguistic Heritage
+              Preserving Kenya's Rich Linguistic Heritage
             </motion.h1>
           }
           subtitle={
@@ -422,7 +422,7 @@ export default function Home() {
               <EnhancedStoryLearning
                 title="A Day at the Market"
                 language="Kikuyu"
-                imageUrl="https://images.unsplash.com/photo-1519013423385-60e83c973a43?q=80&w=1000"
+                imageUrl="/images/market.jpg"
                 segments={storySegments}
               />
             </motion.div>
@@ -523,7 +523,7 @@ export default function Home() {
             >
               <SectionTitle>Explore Kikuyu Culture</SectionTitle>
               <InteractiveCulturalImage
-                imageUrl="https://images.unsplash.com/photo-1604934380103-e397c912e65d?q=80&w=1000"
+                imageUrl="/images/kikuyu-hut.jpg"
                 altText="Kikuyu cultural scene"
                 hotspots={culturalHotspots}
               />
