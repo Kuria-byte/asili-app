@@ -27,7 +27,7 @@ export default function Home() {
       id: "kikuyu",
       name: "Kikuyu",
       region: "Central Kenya",
-      image: "/images/languages/kikuyu.jpg",
+      image: "/images/mt-kenya.jpg",
       difficulty: "Moderate",
       speakers: "8.5 million",
       progress: 40,
@@ -36,7 +36,7 @@ export default function Home() {
       id: "swahili",
       name: "Swahili",
       region: "Coastal Kenya",
-      image: "/images/languages/swahili.jpg",
+      image: "/images/coast.jpg",
       difficulty: "Easy",
       speakers: "15 million",
       progress: 25,
@@ -45,7 +45,7 @@ export default function Home() {
       id: "luo",
       name: "Luo",
       region: "Western Kenya",
-      image: "/images/lake-victoria-2.jpg",
+      image: "/images/fishermen.jpg",
       difficulty: "Moderate",
       speakers: "4.2 million",
       progress: 0,
@@ -145,7 +145,7 @@ export default function Home() {
       title: "Luo Proverb: 'Rieko ok dak e wi ng'ato achiel'",
       content:
         "This Luo proverb translates to 'Wisdom does not reside in one person's head.' It emphasizes the importance of collective knowledge and community consultation in decision-making.",
-      imageUrl: "/images/lake-victoria-2.jpg",
+      imageUrl: "/images/fishermen.jpg",
       category: "proverb" as const,
       language: "Luo",
       region: "Western Kenya",
@@ -155,7 +155,7 @@ export default function Home() {
       title: "The Significance of the Maasai Shuka",
       content:
         "The iconic red checkered cloth worn by the Maasai, known as a shuka, serves both practical and cultural purposes. Beyond providing warmth and protection, the vibrant red color is believed to scare away lions and symbolizes bravery and strength.",
-      imageUrl: "/images/maasai-man2.jpg",
+      imageUrl: "/images/maasai-woman.jpg",
       category: "tradition" as const,
       language: "Maa",
       region: "Rift Valley",
@@ -187,7 +187,7 @@ export default function Home() {
       character: storyCharacters[0],
       text: "Ũhoro waku, Wanjiku? Nĩ mwega?",
       translation: "How are you, Wanjiku? Are you well?",
-      backgroundImageUrl: "/images/market.jpg",
+      backgroundImageUrl: "/images/woman-market.jpg",
       options: [
         {
           id: "1-1",
@@ -423,6 +423,7 @@ export default function Home() {
                 title="A Day at the Market"
                 language="Kikuyu"
                 imageUrl="/images/market.jpg"
+                imageClassName="aspect-video object-cover rounded-lg"
                 segments={storySegments}
               />
             </motion.div>
@@ -460,15 +461,19 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              className="space-y-4 mb-8"
+              className="flex overflow-x-auto gap-4 pb-4 mb-8 -mx-4 px-4 snap-x snap-mandatory"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
             >
               {featuredLanguages.map((language) => (
-                <Link key={language.id} href={`/languages/${language.id}`}>
+                <Link 
+                  key={language.id} 
+                  href={`/languages/${language.id}`}
+                  className="flex-none w-[280px] snap-start"
+                >
                   <motion.div
-                    className="overflow-hidden rounded-xl border border-amber-100 bg-white shadow-sm transition-all hover:shadow-md"
+                    className="h-full overflow-hidden rounded-xl border border-amber-100 bg-white shadow-sm transition-all hover:shadow-md"
                     whileHover={{ y: -5 }}
                   >
                     <div className="relative h-36 w-full">
@@ -515,7 +520,7 @@ export default function Home() {
             </motion.div>
 
             {/* Interactive Cultural Image */}
-            <motion.div
+            {/* <motion.div
               className="mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -527,7 +532,7 @@ export default function Home() {
                 altText="Kikuyu cultural scene"
                 hotspots={culturalHotspots}
               />
-            </motion.div>
+            </motion.div> */}
 
             {/* Kenyan Language Heritage - Enhanced with Tabs */}
             <motion.div

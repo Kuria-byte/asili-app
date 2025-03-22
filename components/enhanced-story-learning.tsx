@@ -39,6 +39,7 @@ interface EnhancedStoryLearningProps {
   title: string
   language: string
   imageUrl: string
+  imageClassName?: string
   segments: StorySegment[]
   className?: string
 }
@@ -47,6 +48,7 @@ export function EnhancedStoryLearning({
   title,
   language,
   imageUrl,
+  imageClassName = "",
   segments,
   className = "",
 }: EnhancedStoryLearningProps) {
@@ -93,7 +95,7 @@ export function EnhancedStoryLearning({
           src={currentSegment.backgroundImageUrl || imageUrl || "/placeholder.svg"}
           alt={title}
           fill
-          className="object-cover"
+          className={`object-cover ${imageClassName}`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
         <div className="absolute bottom-0 left-0 p-4">

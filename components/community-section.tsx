@@ -58,7 +58,7 @@ export function CommunitySection() {
               title="Asili Ambassador"
               icon={<Users className="h-5 w-5" />}
               description="Join our network of passionate language advocates organizing local learning circles and cultural events."
-              illustrationUrl="/images/kikuyu-woman-illustration2.jpg"
+              illustrationUrl="/images/kikuyu-woman-illustration2.jpg?q=80&w=1000&h=1000"
               requirements={ambassadorRequirements}
               ctaText="Apply to Join Program"
               ctaLink="/community/ambassadors"
