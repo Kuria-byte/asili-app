@@ -58,7 +58,7 @@ export function CommunitySection() {
               title="Asili Ambassador"
               icon={<Users className="h-5 w-5" />}
               description="Join our network of passionate language advocates organizing local learning circles and cultural events."
-              illustrationUrl="/images/kikuyu-woman-illustration2.jpg?q=80&w=1000&h=1000"
+              illustrationUrl="/images/kikuyu-art.webp"
               requirements={ambassadorRequirements}
               ctaText="Apply to Join Program"
               ctaLink="/community/ambassadors"
@@ -94,7 +94,7 @@ export function CommunitySection() {
               title="Cultural Bridge"
               icon={<Handshake className="h-5 w-5" />}
               description="Connect with learners through virtual and in-person language exchange events and cultural activities."
-              illustrationUrl="/images/kikuyu-vendor.jpg?q=80&w=1000"
+              illustrationUrl="/images/kikuyu-art.webp"
               requirements={culturalBridgeRequirements}
               ctaText="View Upcoming Events"
               ctaLink="/community/events"
