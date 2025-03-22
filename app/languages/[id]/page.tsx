@@ -22,7 +22,7 @@ export default function LanguagePage({ params }: LanguagePageProps) {
       difficulty: "Moderate",
       image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1000",
       patternImage: "https://images.unsplash.com/photo-1591377176347-a4e99ba5dd6a?q=80&w=1000",
-      culturalImage: "https://images.unsplash.com/photo-1580323956656-26bbb1206e34?q=80&w=1000",
+      culturalImage: "/images/kikuyu-hut.jpg",
       commonPhrases: [
         { phrase: "Ūhoro waku", meaning: "How are you", audio: "/audio/kikuyu/uhoro-waku.mp3" },
         { phrase: "Nĩ mwega", meaning: "I am fine", audio: "/audio/kikuyu/ni-mwega.mp3" },
