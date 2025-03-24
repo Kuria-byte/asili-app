@@ -66,7 +66,7 @@ export function CulturalLinguisticConnections({ languageId, languageName }: Cult
             audio: "/audio/kikuyu/muthigi.mp3",
           },
         ],
-        image: "https://images.unsplash.com/photo-1589825743127-e9b6d0b10525?q=80&w=1000",
+        image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1000",
       },
       ceremonies: {
         title: "Ceremonial Language",
@@ -92,7 +92,7 @@ export function CulturalLinguisticConnections({ languageId, languageName }: Cult
             audio: "/audio/kikuyu/ngurario.mp3",
           },
         ],
-        image: "https://images.unsplash.com/photo-1596005554384-d293674c91d7?q=80&w=1000",
+        image: "/images/kikuyu-beads-2.jpg",
       },
       proverbs: {
         title: "Historical Proverbs",
@@ -118,7 +118,7 @@ export function CulturalLinguisticConnections({ languageId, languageName }: Cult
             audio: "/audio/kikuyu/kaana-ka-muciari.mp3",
           },
         ],
-        image: "https://images.unsplash.com/photo-1627394678694-cd1f98b014c0?q=80&w=1000",
+        image: "/images/kikuyu-hut.jpg",
       },
       trade: {
         title: "Trade and Contact Words",
@@ -144,7 +144,7 @@ export function CulturalLinguisticConnections({ languageId, languageName }: Cult
             audio: "/audio/kikuyu/muthungu.mp3",
           },
         ],
-        image: "https://images.unsplash.com/photo-1590247813693-5541d1c609fd?q=80&w=1000",
+        image: "/images/kikuyu-beads.jpg",
       },
     },
     // Add other languages here
