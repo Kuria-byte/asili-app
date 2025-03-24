@@ -3,6 +3,7 @@ import Image from "next/image"
 import { Volume2, ChevronRight } from "lucide-react"
 import { ModeToggle } from "@/components/theme-toggle"
 import { BottomNav } from "@/components/navigation/bottom-nav"
+import { LanguageHistoricalContext } from "@/components/language-historical-context/language-historical-context"
 
 interface LanguagePageProps {
   params: {
@@ -20,7 +21,7 @@ export default function LanguagePage({ params }: LanguagePageProps) {
         "Kikuyu is a Bantu language spoken primarily by the Kikuyu people of Kenya. It is the most widely spoken indigenous language in Kenya, with over 8.5 million speakers. The language is closely related to other Bantu languages in the region and is known for its rich oral tradition and cultural significance.",
       speakers: "8.5 million",
       difficulty: "Moderate",
-      image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1000",
+      image: "/images/mt-kenya.jpg",
       patternImage: "https://images.unsplash.com/photo-1591377176347-a4e99ba5dd6a?q=80&w=1000",
       culturalImage: "/images/kikuyu-hut.jpg",
       commonPhrases: [
@@ -139,7 +140,9 @@ export default function LanguagePage({ params }: LanguagePageProps) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-6">
                 <div
-                  className={`mb-3 inline-block rounded-full px-3 py-1 text-xs font-medium ${getDifficultyColor(language.difficulty)}`}
+                  className={`mb-3 inline-block rounded-full px-3 py-1 text-xs font-medium ${getDifficultyColor(
+                    language.difficulty,
+                  )}`}
                 >
                   {language.difficulty}
                 </div>
@@ -154,6 +157,9 @@ export default function LanguagePage({ params }: LanguagePageProps) {
             <h2 className="mb-3 font-serif text-xl text-amber-950">About {language.name}</h2>
             <p className="text-amber-900">{language.description}</p>
           </div>
+
+          {/* Historical Context Section */}
+          <LanguageHistoricalContext languageId={params.id} languageName={language.name} />
 
           {/* Common Phrases */}
           <div className="mb-8">
