@@ -24,7 +24,7 @@ interface TodaysLearningProps {
 }
 
 export function TodaysLearning({ activities, className = "" }: TodaysLearningProps) {
-  const [activeFilter, setActiveFilter] = useState<string>("all")
+  const [activeFilter, setActiveFilter] = useState<string>("lesson")
 
   const filteredActivities =
     activeFilter === "all" ? activities : activities.filter((activity) => activity.type === activeFilter)
@@ -39,14 +39,6 @@ export function TodaysLearning({ activities, className = "" }: TodaysLearningPro
       </div>
 
       <div className="flex gap-2 overflow-x-auto pb-2 hide-scrollbar">
-        <button
-          onClick={() => setActiveFilter("all")}
-          className={`whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
-            activeFilter === "all" ? "bg-amber-500 text-white" : "bg-white text-amber-900 border border-amber-200"
-          }`}
-        >
-          All Activities
-        </button>
         <button
           onClick={() => setActiveFilter("lesson")}
           className={`whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
@@ -78,6 +70,14 @@ export function TodaysLearning({ activities, className = "" }: TodaysLearningPro
           }`}
         >
           Cultural
+        </button>
+        <button
+          onClick={() => setActiveFilter("all")}
+          className={`whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
+            activeFilter === "all" ? "bg-amber-500 text-white" : "bg-white text-amber-900 border border-amber-200"
+          }`}
+        >
+          All Activities
         </button>
       </div>
 
