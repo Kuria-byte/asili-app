@@ -2,10 +2,10 @@
 
 import { usePathname } from "next/navigation"
 import Link from "next/link"
-import { Home, Globe, BookOpen, User } from "lucide-react"
+import { Home, Globe, BookOpen, User, Users } from "lucide-react"
 
 interface BottomNavProps {
-  activePath?: "home" | "languages" | "lessons" | "profile"
+  activePath?: "home" | "languages" | "lessons" | "profile" | "community"
 }
 
 export function BottomNav({ activePath }: BottomNavProps) {
@@ -23,7 +23,9 @@ export function BottomNav({ activePath }: BottomNavProps) {
           ? "lessons"
           : pathname.startsWith("/profile")
             ? "profile"
-            : "home")
+            : pathname.startsWith("/community")
+              ? "community"
+              : "home")
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 border-t border-amber-100 dark:border-amber-900/30 bg-white dark:bg-card py-2 z-40">
@@ -94,6 +96,30 @@ export function BottomNav({ activePath }: BottomNavProps) {
               }`}
             >
               Lessons
+            </span>
+          </Link>
+
+          {/* Community - New */}
+          <Link
+            href="/community"
+            className={`flex flex-col items-center group ${currentPath === "community" ? "pointer-events-none" : ""}`}
+            aria-current={currentPath === "community" ? "page" : undefined}
+          >
+            <Users
+              className={`h-6 w-6 transition-transform duration-200 group-hover:scale-110 ${
+                currentPath === "community"
+                  ? "text-amber-500 dark:text-amber-400"
+                  : "text-amber-700 dark:text-amber-600"
+              }`}
+            />
+            <span
+              className={`mt-1 text-xs ${
+                currentPath === "community"
+                  ? "text-amber-500 dark:text-amber-400 font-medium"
+                  : "text-amber-700 dark:text-amber-600"
+              }`}
+            >
+              Community
             </span>
           </Link>
 
