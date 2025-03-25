@@ -100,7 +100,7 @@ export function BottomNav({ activePath }: BottomNavProps) {
           </Link>
 
           {/* Community - New */}
-          <Link
+          {/* <Link
             href="/community"
             className={`flex flex-col items-center group ${currentPath === "community" ? "pointer-events-none" : ""}`}
             aria-current={currentPath === "community" ? "page" : undefined}
@@ -121,7 +121,7 @@ export function BottomNav({ activePath }: BottomNavProps) {
             >
               Community
             </span>
-          </Link>
+          </Link> */}
 
           {/* Profile */}
           <Link
